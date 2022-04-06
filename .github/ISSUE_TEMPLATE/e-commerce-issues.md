@@ -1,6 +1,6 @@
 ---
 name: E-commerce Issues
-about: "{{Issue Name}}"
+about: Issues To Solve For Art Website
 title: ''
 labels: ''
 assignees: ''
