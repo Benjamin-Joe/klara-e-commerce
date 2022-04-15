@@ -26,7 +26,7 @@
                                             {% else %}
                                                 <p class="mb-0"><small class="text-muted">No Rating</small></p>
                                             {% endif %}
-                                        <button class="btn btn-secondary view-btn"> <a class="view-product-btn" href=""> View Product</a></button>
+                                        <button class="btn btn-secondary view-btn"> <a class="view-product-btn" href="{% url 'product_detail' product.id %}"> View Product</a></button>
                                         </div>
                                     </div>
                                 </div>
