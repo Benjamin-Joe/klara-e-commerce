@@ -5,9 +5,8 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     "Category creation model"
-    name = models.CharField(max_length=100, unique=True, db_index=True)
-    slug = models.SlugField(unique=True)
-
+    name = models.CharField(max_length=100, unique=True)
+    
     def __str__(self):
         "Returns category name"
         return self.name

@@ -6,7 +6,9 @@
                 Categories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="{% url 'products' %}?=test" class="dropdown-item">Test</a>
+                    <a href="{% url 'products' %}?category=Test" class="dropdown-item">Test</a>
+                    <a href="{% url 'products' %}?category=two" class="dropdown-item">Two</a>
+
                 </div>
             </li>
             <li class="nav-item dropdown nav-2-item">
@@ -14,8 +16,8 @@
                 Price
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="" class="dropdown-item">Low To High</a>
-                    <a href="" class="dropdown-item">High To Low</a>
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Low To High</a>
+                    <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">High To Low</a>
                 </div>
             </li>
             <li class="nav-item dropdown nav-2-item">
@@ -23,8 +25,8 @@
                 Rating
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="" class="dropdown-item">Low To High</a>
-                    <a href="" class="dropdown-item">High To Low</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item">Low To High</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">High To Low</a>
                 </div>
             </li>
         </div>
