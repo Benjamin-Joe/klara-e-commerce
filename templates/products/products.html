@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="content-holder">
-        <h1 class="text-center"> Store</h1>
+        <h1 class="text-center"> <a href="{% url 'products' %}"> Store </a></h1>
         <p class="text-center"><small><a href="/">Home</a> | {{ products|length }} Product(s)</small></p>
         <div class="row">
             <div class="col-10 offset-1">
@@ -20,7 +20,7 @@
                                         <div class="col">
                                         <p class="lead mb-0 text-center">{{ product.title}}</p>
                                             <p class="lead mb-0 text-center font-weight-bold">${{ product.price }}</p>
-                                            <p class="text-center card-cat mb-0"><a href="{% url 'products' %}">{{ product.category }}</a></p>
+                                            <p class="text-center card-cat mb-0"><a href="{% url 'products' %}?category={{product.category.name}}">{{ product.category }}</a></p>
                                             {% if product.rating %}
                                                 <p class="mb-0 text"><small class="text-muted"><i class="fas fa-medal mr-1"></i>{{ product.rating }} / 5</small></p>
                                             {% else %}
